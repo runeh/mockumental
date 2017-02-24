@@ -1,0 +1,64 @@
+{
+   "children" : [
+      {
+         "path" : "example/recommendations_json",
+         "children" : [],
+         "name" : "recommendations_json",
+         "size" : 0
+      },
+      {
+         "path" : "example/root.200.json",
+         "extension" : ".json",
+         "size" : 0,
+         "name" : "root.200.json"
+      },
+      {
+         "path" : "example/searches",
+         "children" : [
+            {
+               "name" : "MARKET",
+               "size" : 0,
+               "children" : [
+                  {
+                     "extension" : ".js",
+                     "path" : "example/searches/MARKET/hits.json.js",
+                     "name" : "hits.json.js",
+                     "size" : 0
+                  }
+               ],
+               "path" : "example/searches/MARKET"
+            }
+         ],
+         "name" : "searches",
+         "size" : 0
+      },
+      {
+         "name" : "unreadcount_json",
+         "size" : 0,
+         "path" : "example/unreadcount_json",
+         "children" : [
+            {
+               "size" : 0,
+               "name" : "error.500.json",
+               "extension" : ".json",
+               "path" : "example/unreadcount_json/error.500.json"
+            },
+            {
+               "extension" : ".json",
+               "path" : "example/unreadcount_json/many-hits.200.json",
+               "size" : 0,
+               "name" : "many-hits.200.json"
+            },
+            {
+               "name" : "no-hits.200.json",
+               "size" : 0,
+               "extension" : ".json",
+               "path" : "example/unreadcount_json/no-hits.200.json"
+            }
+         ]
+      }
+   ],
+   "path" : "./example",
+   "name" : "example",
+   "size" : 0
+}

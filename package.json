@@ -1,0 +1,13 @@
+{
+  "name": "flimber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "directory-tree": "^1.2.0",
+    "findit": "^2.0.0",
+    "walk": "^2.3.9",
+    "wayfarer": "^6.4.0"
+  }
+}
