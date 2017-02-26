@@ -1,4 +1,4 @@
-const { crawl, flattenRoutes } = require('./lib/crawler');
+const { crawl } = require('./lib/crawler');
 const { resolve } = require('path');
 
 // console.log(JSON.stringify(crawl(resolve('./example'))))
@@ -8,8 +8,10 @@ const { MockServer } = require('./lib/middleware');
 const tree = crawl(resolve('./ex2'));
 const server = new MockServer(tree);
 
-flattenRoutes(tree).forEach(([method, path, handlers]) => {
-    console.log(method, path, handlers);
+const { flatten, flattenWithMethod } = require('./lib/flattener');
+
+flattenWithMethod(tree).forEach(([path, handlers]) => {
+    console.log(path, Object.keys(handlers));
 });
 // const express = require('express');
 // const app = express();
