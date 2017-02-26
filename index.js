@@ -1,4 +1,4 @@
-const { crawl } = require('./lib/crawler');
+const { crawl, flattenRoutes } = require('./lib/crawler');
 const { resolve } = require('path');
 
 // console.log(JSON.stringify(crawl(resolve('./example'))))
@@ -8,20 +8,19 @@ const { MockServer } = require('./lib/middleware');
 const tree = crawl(resolve('./ex2'));
 const server = new MockServer(tree);
 
-const express = require('express');
-const app = express();
-
-app.get('/', function(req, res) {
-    res.send('Hello World!');
+flattenRoutes(tree).forEach(([method, path, handlers]) => {
+    console.log(method, path, handlers);
 });
-
-app.use(server.router());
-console.log(server.routes);
-
-app.listen(3000, function() {
-    console.log('Example app listening on http://localhost:3000');
-});
-
+// const express = require('express');
+// const app = express();
+// app.get('/', function(req, res) {
+//     res.send('Hello World!');
+// });
+// app.use(server.router());
+// console.log(server.routes);
+// app.listen(3000, function() {
+//     console.log('Example app listening on http://localhost:3000');
+// });
 // var prettyjson = require('prettyjson');
 // console.log(JSON.stringify(parseFileSystem(resolve('./example'))))
 // const router = createRouter('./example');
