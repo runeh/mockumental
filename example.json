@@ -1,64 +1,130 @@
 {
-   "children" : [
-      {
-         "path" : "example/recommendations_json",
-         "children" : [],
-         "name" : "recommendations_json",
-         "size" : 0
-      },
-      {
-         "path" : "example/root.200.json",
-         "extension" : ".json",
-         "size" : 0,
-         "name" : "root.200.json"
-      },
-      {
-         "path" : "example/searches",
-         "children" : [
-            {
-               "name" : "MARKET",
-               "size" : 0,
-               "children" : [
-                  {
-                     "extension" : ".js",
-                     "path" : "example/searches/MARKET/hits.json.js",
-                     "name" : "hits.json.js",
-                     "size" : 0
-                  }
-               ],
-               "path" : "example/searches/MARKET"
-            }
-         ],
-         "name" : "searches",
-         "size" : 0
-      },
-      {
-         "name" : "unreadcount_json",
-         "size" : 0,
-         "path" : "example/unreadcount_json",
-         "children" : [
-            {
-               "size" : 0,
-               "name" : "error.500.json",
-               "extension" : ".json",
-               "path" : "example/unreadcount_json/error.500.json"
+    "segmentName": "example",
+    "isWildcard": false,
+    "wildcardName": null,
+    "handlers": {
+        "GET": [{
+            "name": "root.200.json",
+            "status": 200,
+            "method": "GET",
+            "type": "json",
+            "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/root.200.json"
+        }]
+    },
+    "children": [{
+            "segmentName": "lol",
+            "isWildcard": true,
+            "wildcardName": "lol",
+            "handlers": {
+                "GET": [{
+                    "name": "yup.200.json",
+                    "status": 200,
+                    "method": "GET",
+                    "type": "json",
+                    "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/LOL/yup.200.json"
+                }]
             },
-            {
-               "extension" : ".json",
-               "path" : "example/unreadcount_json/many-hits.200.json",
-               "size" : 0,
-               "name" : "many-hits.200.json"
+            "children": []
+        },
+        {
+            "segmentName": "recommendations.json",
+            "isWildcard": false,
+            "wildcardName": null,
+            "handlers": {
+                "POST": [{
+                    "name": "dismissed.post.200.json",
+                    "status": 200,
+                    "method": "POST",
+                    "type": "json",
+                    "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/recommendations.json/dismissed.post.200.json"
+                }],
+                "GET": [{
+                    "name": "latest.get.200.json",
+                    "status": 200,
+                    "method": "GET",
+                    "type": "json",
+                    "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/recommendations.json/latest.get.200.json"
+                }]
             },
-            {
-               "name" : "no-hits.200.json",
-               "size" : 0,
-               "extension" : ".json",
-               "path" : "example/unreadcount_json/no-hits.200.json"
-            }
-         ]
-      }
-   ],
-   "path" : "./example",
-   "name" : "example",
-   "size" : 0
+            "children": []
+        },
+        {
+            "segmentName": "searches",
+            "isWildcard": false,
+            "wildcardName": null,
+            "handlers": {},
+            "children": [{
+                "segmentName": "market",
+                "isWildcard": true,
+                "wildcardName": "market",
+                "handlers": {
+                    "GET": [{
+                        "name": "hits.json.js",
+                        "status": 200,
+                        "method": "GET",
+                        "type": "js",
+                        "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/searches/MARKET/hits.json.js"
+                    }]
+                },
+                "children": []
+            }]
+        },
+        {
+            "segmentName": "unreadcount.json",
+            "isWildcard": false,
+            "wildcardName": null,
+            "handlers": {
+                "GET": [{
+                        "name": "error.500.json",
+                        "status": 500,
+                        "method": "GET",
+                        "type": "json",
+                        "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/unreadcount.json/error.500.json"
+                    },
+                    {
+                        "name": "many-hits.200.json",
+                        "status": 200,
+                        "method": "GET",
+                        "type": "json",
+                        "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/unreadcount.json/many-hits.200.json"
+                    },
+                    {
+                        "name": "no-hits.200.json",
+                        "status": 200,
+                        "method": "GET",
+                        "type": "json",
+                        "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/unreadcount.json/no-hits.200.json"
+                    }
+                ]
+            },
+            "children": []
+        },
+        {
+            "segmentName": "user",
+            "isWildcard": false,
+            "wildcardName": null,
+            "handlers": {},
+            "children": [{
+                "segmentName": "user",
+                "isWildcard": true,
+                "wildcardName": "user",
+                "handlers": {},
+                "children": [{
+                    "segmentName": "device",
+                    "isWildcard": true,
+                    "wildcardName": "device",
+                    "handlers": {
+                        "GET": [{
+                            "name": "handler.json",
+                            "status": 200,
+                            "method": "GET",
+                            "type": "json",
+                            "path": "/Users/runhalvo/Dropbox/prosjekter/flimber/example/user/USER/DEVICE/handler.json"
+                        }]
+                    },
+                    "children": []
+                }]
+            }]
+        }
+    ]
 }

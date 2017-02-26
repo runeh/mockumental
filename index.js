@@ -1,62 +1,41 @@
-const directoryTree = require('directory-tree');
-const wayfarer = require('wayfarer');
+const { crawl } = require('./lib/crawler');
+const { resolve } = require('path');
 
-function isDir(root) {
-    return !!root.children;
-}
 
-function isFile(root) {
-    return !isDir(root);
-}
+// console.log(JSON.stringify(crawl(resolve('./example'))))
 
-function dirHandlers(root) {
-    return isDir(root) ? root.children.filter(isFile) : [];
-}
 
-function childrenOf(root) {
-    return isDir(root) ? root.children.filter(isDir) : [];
-}
+const { MockServer } = require('./lib/middleware');
 
-function isWildcardPath(root) {
-    return root.name.toUpperCase() === root.name;
-}
 
-function makeHandlerFor(root) {
-    return (a, b) => {
-        console.log(`got hit on /${root.name}`, a, b);
-        // console.log("should use one of")
-        // console.log(dirHandlers(root));            
-    }
-}
+const tree = crawl(resolve('./example'));
+const server = new MockServer(tree);
 
-function walkDir(root) {
-    const router = wayfarer();
-    console.log('walking into', root.name, root.path);
 
-    if (isWildcardPath(root)) {
-        router.on(`:${root.name.toLowerCase()}`, makeHandlerFor(root));
-    } else {
-        const name = root.name.replace('_', '.');
-        router.on(name, makeHandlerFor(root));
-    }
+const express = require('express');
+const app = express();
 
-    childrenOf(root).map(walkDir).filter(Boolean).forEach(childRouter => {
-        router.on(`${root.name}`, childRouter);
-    });
+app.get('/', function(req, res) {
+    res.send('Hello World!');
+});
 
-    return router;
-}
+app.use(server.router());
+console.log(server.routes)
 
-function createRouter(rootPath) {
-    const tree = directoryTree(rootPath);
-    return walkDir(tree);
-}
 
-const router = createRouter('./example');
+app.listen(3000, function() {
+    console.log('Example app listening on http://localhost:3000');
+});
+
+
+// var prettyjson = require('prettyjson');
+// console.log(JSON.stringify(parseFileSystem(resolve('./example'))))
+
+// const router = createRouter('./example');
 
 // router('/example', 1111);
 // router('/example/searches', 1112);
 // router('/example/what', 1113);
 // router('/example/searches/foobar', 1114);
-router('/example/unreadcount_json', 1114);
+// router('/example/unreadcount_json', 1114);
 // router('/example/user/rune/nokia', 1114);
