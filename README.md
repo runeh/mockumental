@@ -9,7 +9,7 @@ response codes. A UI is provided to switch between available responses.
 
 ```
 npm install
-node index-express-cli.js
+npm start
 ```
 
 This will serve a web server on port 3000 matching the contents of the `./ex2`

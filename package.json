@@ -1,14 +1,17 @@
 {
-  "name": "mocumental",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": {},
-  "license": "MIT",
-  "dependencies": {
-    "directory-tree": "^1.2.0",
-    "express": "^4.14.1",
-    "inquirer": "^3.0.4",
-    "prettyjson": "^1.2.1",
-    "wayfarer": "^6.4.0"
-  }
+    "name": "mocumental",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": {},
+    "license": "MIT",
+    "dependencies": {
+        "directory-tree": "^1.2.0",
+        "express": "^4.14.1",
+        "inquirer": "^3.0.4",
+        "prettyjson": "^1.2.1",
+        "wayfarer": "^6.4.0"
+    },
+    "scripts": {
+        "start": "node index-express-cli.js"
+    }
 }
