@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
     res.send('Hello World!');
 });
 
-const mock = middleware('./ex2');
+const mock = middleware('./example');
 
 mock.paths.forEach(({ path, method }) => {
     console.log(method, path);
