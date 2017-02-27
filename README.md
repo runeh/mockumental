@@ -1,17 +1,82 @@
-# Mocumental
+# Mocumental - Directory based http server for testing.
 
-Directory based http server for testing.
+Mocumental is useful when developing services that talk to HTTP servers.
+With Mocumental you define routes on the server as a set of paths on the
+file system. For each route it's possible to define multiple responses and
+response codes. A UI is provided to switch between available responses.
 
+## Quick example:
+
+```
+npm install
+node index-express-cli.js
+```
+
+This will serve a web server on port 3000 matching the contents of the `./ex2`
+folder in the repo. There will be an interactive command line interface to
+select which handlers should be activated for the different routes.
+
+## Example
+
+A mock server is represented by a root folder. Within the root, folders
+represents the paths of URIs, and files are response handlers for the URIs
+
+A directory that represents a mock service could look like this:
+
+```
+/
+├─ index.html
+├─ error.500.html
+├─ user
+│  ├─ create.PUT.201.json
+│  └─ USERID
+│     ├─ profile
+│     │  ├─ regular-user.DEFAULT.json
+│     │  ├─ admin-user.json
+│     │  ├─ not-found.404.json
+│     │  ├─ edit-ok.POST.json
+│     │  └─ delete-ok.DELETE.json
+│     └─ profile-widget
+│        ├─ ok.html
+│        └─ not-found.404.html
+└─ search
+   ├─ many-hits.200.json
+   └─ zero-hits.200.json
+```
+
+
+
+## File name and path conventions
+
+- Any 3 digit number enclosed in periods is assumed to be a HTTP status code.
+  If no status code is given, it's assumed to be 200.
+    - `error.500.html`
+    - `success.200.html`
+- Any uppercase HTTP method enclosed in periods is assumed to be the HTTP
+  verb the handler responds to. If no method is given, `GET` is assumed:
+    - `create-user.POST.json`
+    - `update-user.PUT.json`
+- File extensions are assumed to match the mime type of the document. Thus
+  thus `.json`, `.html`, `.png` etc. should just work.
+- Directory names in all upper case are assumed to be wildcards. That is, the
+  path segment will match anything:
+    - `/user/ID/profile.json`
+
+## Notes:
+
+- Needs to use extensions on **folder name** if the server is meant to respond
+  to urls with extensions. So one might have the folder name `/userdata.json`
+  which contains multiple handlers for the path.
 
 ## todo:
 
+- isStatic and isDynamic stuff: so `.json.js` should run the js to create the
+  json.
 - CORS
 - Web UI
 - Route sorting
-- isStatic and isDynamic stuff
 - use built in routing API
-- Human readable handler names. Move?
 - Use chalk for colors and stuff
 - rename paths to routes in mw?
-- quit and show routes in cli?
+- "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?

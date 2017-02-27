@@ -4,9 +4,9 @@ const { middleware } = require('./lib/express');
 
 const app = express();
 
-app.get('/', function(req, res) {
-    res.send('Hello World!');
-});
+// app.get('/', function(req, res) {
+//     res.send('Hello World!');
+// });
 
 const mock = middleware('./example');
 

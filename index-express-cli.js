@@ -5,9 +5,9 @@ const { handlerSelector } = require('./lib/inquirer');
 
 const app = express();
 
-app.get('/', function(req, res) {
-    res.send('Hello World!');
-});
+// app.get('/', function(req, res) {
+//     res.send('Hello World!');
+// });
 
 const mock = middleware('./ex2');
 // const mock = middleware('./example');
