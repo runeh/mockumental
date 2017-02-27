@@ -14,3 +14,4 @@ Directory based http server for testing.
 - Use chalk for colors and stuff
 - rename paths to routes in mw?
 - quit and show routes in cli?
+- Care about accept types? Sounds like too much work for too little utility?
