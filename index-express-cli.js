@@ -21,7 +21,11 @@ function aquireGuiSelection() {
 }
 
 app.use(mock.router);
-app.listen(3000, function() {
-    console.log('Example app listening on http://localhost:3000');
+
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || '0.0.0.0';
+
+const listener = app.listen(port, ip, function() {
+    console.log(`Example app listening on http://localhost:${port}`);
     aquireGuiSelection();
 });
