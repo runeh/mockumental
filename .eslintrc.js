@@ -20,6 +20,12 @@ module.exports = {
                 exports: "always-multiline",
                 functions: 'never'
             }
-        ]
+        ],
+        "consistent-return": "error",
+        "template-curly-spacing": ["error", "always"],
+        "prefer-template": "warn",
+        "no-new-symbol": "error",
+        "prefer-const": "error",
+        "no-multi-spaces": "error",
     }
 };
