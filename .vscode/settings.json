@@ -1,5 +1,5 @@
 {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "prettier.bracketSpacing": true,
     "prettier.singleQuote": true,
     "prettier.printWidth": 80,

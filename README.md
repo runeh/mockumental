@@ -80,3 +80,4 @@ A directory that represents a mock service could look like this:
 - rename paths to routes in mw?
 - "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?
+- Docs
