@@ -35,7 +35,7 @@ const mock = middleware(mockRootDir);
 
 // fixme: move cli utils into separate package
 function aquireGuiSelection() {
-    handlerSelector(mock.paths, mock.activations).then(function(answers) {
+    handlerSelector(mock.routes, mock.activations).then(function(answers) {
         const { handler: { routeId, handlerId } } = answers;
         mock.setHandler(routeId, handlerId);
         return aquireGuiSelection();
