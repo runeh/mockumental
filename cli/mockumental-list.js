@@ -13,7 +13,7 @@ const srcPath = '../ex2';
 const routes = flatten(crawl(resolve(srcPath)));
 
 if (program.json) {
-    console.log(JSON.stringify(routes));
+    console.log(JSON.stringify(routes, null, 4));
 }
 else {
     for (const {path, method, handlers} of routes) {
