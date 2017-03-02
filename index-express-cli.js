@@ -1,4 +1,5 @@
 const express = require('express');
+const clear = require('clear');
 
 const { middleware } = require('./lib/express');
 const { handlerSelector } = require('./lib/inquirer');
@@ -13,6 +14,7 @@ const mock = middleware('./ex2');
 // const mock = middleware('./example');
 
 function aquireGuiSelection() {
+    clear();
     handlerSelector(mock.paths, mock.activations).then(function(answers) {
         const { handler: { routeId, handlerId } } = answers;
         mock.setHandler(routeId, handlerId);
