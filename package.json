@@ -8,6 +8,7 @@
     "dependencies": {
         "clear": "^0.0.1",
         "commander": "^2.9.0",
+        "cors": "^2.8.1",
         "directory-tree": "^1.2.0",
         "express": "^4.14.1",
         "inquirer": "^3.0.4",

@@ -4,6 +4,7 @@ const { resolve } = require('path');
 
 const express = require('express');
 const program = require('commander');
+const cors = require('cors');
 
 const { middleware } = require('../lib/express');
 const { handlerSelector } = require('../lib/inquirer');
@@ -14,6 +15,7 @@ program
     .option('-p, --port <n>', 'port to bind to (default 3031)', parseInt)
     .option('-i, --ip <ip>', 'host / ip to bind to (default 0.0.0.0')
     .option('-m, --mount <path>', 'mount point')
+    .option('-c, --cors', 'enable CORS')
     .parse(process.argv);
 
 const mockRootDir = resolve(program.args.shift() || './');
@@ -38,6 +40,10 @@ function aquireGuiSelection() {
         mock.setHandler(routeId, handlerId);
         return aquireGuiSelection();
     });
+}
+
+if (program.cors) {
+    app.use(cors());
 }
 
 app.use(mountPoint, mock.router);
