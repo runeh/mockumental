@@ -12,6 +12,7 @@
         "directory-tree": "^1.2.0",
         "express": "^4.14.1",
         "inquirer": "^3.0.4",
+        "mime-types": "^2.1.14",
         "prettyjson": "^1.2.1",
         "wayfarer": "^6.4.0"
     },
