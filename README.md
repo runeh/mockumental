@@ -81,8 +81,13 @@ A directory that represents a mock service could look like this:
 - Docs
 - handler.proxy
 - handler.proxyonce (means statefulness somewhere)
+  - Could be generic '.cache.' which'll just persist whatever, regardless
+    if it came from proxy or file or script. Can be valuable for script
+    as well I guess?
 - handler.500ms.json
 - tests
+- Hosts?
+- parse status code thingy `200.json`;
 
 ## Notes
 
