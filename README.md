@@ -68,16 +68,43 @@ A directory that represents a mock service could look like this:
   to urls with extensions. So one might have the folder name `/userdata.json`
   which contains multiple handlers for the path.
 
-## todo:
+## Todo:
 
 - isStatic and isDynamic stuff: so `.json.js` should run the js to create the
   json.
 - CORS
 - Web UI
-- Route sorting
 - use built in routing API
 - Use chalk for colors and stuff
-- rename paths to routes in mw?
 - "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?
 - Docs
+- handler.proxy
+- handler.proxyonce (means statefulness somewhere)
+- handler.500ms.json
+- tests
+
+## Notes
+
+
+```
+function matchRoute(matchers, path, method == 'get') {
+
+}
+
+const response = function evaluateHandler(handler, {
+  qs, body, headers
+});
+
+const {
+  status,
+  contentType,
+  headers,
+  body(promise/stream/string/object?)
+}
+
+```
+
+
+
+
