@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 
-const { resolve } = require('path');
-const { crawl } = require('../lib/crawler');
-const { flatten } = require('../lib/flattener');
 const program = require('commander');
+const { Mockumental } = require('../lib/index');
 
 program
     .option('-j, --json', 'dump as json')
     .parse(process.argv);
 
-const mockRootDir = resolve(program.args.shift() || './');
-const routes = flatten(crawl(resolve(mockRootDir)));
+const mockRootDir = program.args.shift() || './';
+const mocker = new Mockumental(mockRootDir);
+const routes = mocker.getRoutes();
 
 if (program.json) {
     console.log(JSON.stringify(routes, null, 4));
@@ -19,7 +18,7 @@ else {
     for (const {path, method, handlers} of routes) {
         console.log(path, method);
         for (const handler of handlers) {
-            console.log('  ', handler.prettyName, handler.status, handler.mimeType,
+            console.log('    ', handler.prettyName, handler.status, handler.mimeType,
                 handler.isDefaultHandler ? 'default' : '');
         }
     }
