@@ -3,6 +3,9 @@ module.exports = {
         es6: true,
         node: true,
     },
+    parserOptions: {
+        ecmaVersion: 6,
+    },
     extends: 'eslint:recommended',
     rules: {
         'no-console': 'warn',
@@ -14,18 +17,18 @@ module.exports = {
         'comma-dangle': [
             'error',
             {
-                arrays: "always-multiline",
-                objects: "always-multiline",
-                imports: "always-multiline",
-                exports: "always-multiline",
+                arrays: 'always-multiline',
+                objects: 'always-multiline',
+                imports: 'always-multiline',
+                exports: 'always-multiline',
                 functions: 'never'
             }
         ],
-        "consistent-return": "error",
-        "template-curly-spacing": ["error", "always"],
-        "prefer-template": "warn",
-        "no-new-symbol": "error",
-        "prefer-const": "error",
-        "no-multi-spaces": "error",
+        'consistent-return': 'error',
+        'template-curly-spacing': ['error', 'always'],
+        'prefer-template': 'warn',
+        'no-new-symbol': 'error',
+        'prefer-const': 'error',
+        'no-multi-spaces': 'error'
     }
 };

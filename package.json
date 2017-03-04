@@ -21,6 +21,6 @@
         "start": "node index-express-cli.js"
     },
     "devDependencies": {
-        "eslint": "^3.16.1"
+        "eslint": "^3.17.0"
     }
 }
