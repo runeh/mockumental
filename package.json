@@ -23,6 +23,8 @@
         "start": "node index-express-cli.js"
     },
     "devDependencies": {
-        "eslint": "^3.17.0"
+        "eslint": "^3.17.0",
+        "eslint-plugin-jest": "^19.0.1",
+        "jest": "^19.0.2"
     }
 }

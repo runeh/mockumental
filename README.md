@@ -75,7 +75,7 @@ A directory that represents a mock service could look like this:
 - Web UI
 - HTTP api
 - HTTP log
-- Use chalk for colors and stuff
+- Use chalk for colors and stuff. Harder.
 - "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?
 - Docs

@@ -1,10 +1,12 @@
 module.exports = {
+    plugins: ['jest'],
     env: {
         es6: true,
         node: true,
+        'jest/globals': true // fixme: namespaced to test dir?
     },
     parserOptions: {
-        ecmaVersion: 6,
+        ecmaVersion: 6
     },
     extends: 'eslint:recommended',
     rules: {
