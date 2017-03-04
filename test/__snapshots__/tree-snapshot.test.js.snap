@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dir parsing snapshot smoke test 1`] = `
+Array [
+  Object {
+    "handlers": Array [
+      Object {
+        "handlerId": "r1h1",
+        "handlerType": "static",
+        "isDefaultHandler": false,
+        "method": "GET",
+        "mimeType": "application/json",
+        "name": "ok.json",
+        "path": "/Users/runeh/Dropbox/prosjekter/mockumental/test/fixture-tree/ok.json",
+        "prettyName": "ok",
+        "routeId": "r1",
+        "status": 200,
+        "type": "json",
+      },
+      Object {
+        "handlerId": "r1h2",
+        "handlerType": "static",
+        "isDefaultHandler": false,
+        "method": "GET",
+        "mimeType": "application/json",
+        "name": "maintenance.200.json",
+        "path": "/Users/runeh/Dropbox/prosjekter/mockumental/test/fixture-tree/maintenance.200.json",
+        "prettyName": "maintenance",
+        "routeId": "r1",
+        "status": 200,
+        "type": "json",
+      },
+    ],
+    "method": "GET",
+    "path": "/",
+    "routeId": "r1",
+  },
+]
+`;

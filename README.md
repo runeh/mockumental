@@ -88,6 +88,7 @@ A directory that represents a mock service could look like this:
 - tests
 - Hosts?
 - parse status code thingy `200.json`;
+- util/writeMockToRes: set headers and stuff
 
 ## Notes
 
