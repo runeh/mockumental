@@ -73,6 +73,8 @@ A directory that represents a mock service could look like this:
 - isStatic and isDynamic stuff: so `.json.js` should run the js to create the
   json.
 - Web UI
+- HTTP api
+- HTTP log
 - Use chalk for colors and stuff
 - "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?
