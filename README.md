@@ -83,6 +83,8 @@ Core
 - handler.500ms.json
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
+- .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
+- Promises. Like from dynamic handlers
 
 CLI
 

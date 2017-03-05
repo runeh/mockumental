@@ -20,3 +20,8 @@ test('dynamic json type', () => {
         .toBe('dynamic');
 });
 
+test('static when js and no other extension', () => {
+    expect(getHandlerType('ok.js'))
+        .toBe('static');
+});
+
