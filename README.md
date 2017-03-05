@@ -70,37 +70,47 @@ A directory that represents a mock service could look like this:
 
 ## Todo:
 
+Core 
+
 - isStatic and isDynamic stuff: so `.json.js` should run the js to create the
   json.
-- Web Fancyness
-- HTTP log
-- Use chalk for colors and stuff. Harder.
-- "quit" and "show" routes in cli?
 - Care about accept types? Sounds like too much work for too little utility?
-- Docs
 - handler.proxy
 - handler.proxyonce (means statefulness somewhere)
   - Could be generic '.cache.' which'll just persist whatever, regardless
     if it came from proxy or file or script. Can be valuable for script
     as well I guess? Cache on handler or path? Path is better presumably
 - handler.500ms.json
+- sorting is wonky for alpha route names?
+- Support explicit hid in handler names
+
+CLI
+
+- Use chalk for colors and stuff. Harder.
+- "quit" and "show" routes in cli?
+- Remove selected prop in inquire.
+- cli for selecting a hid via http?
+
+Webui
+
+- Web Fancyness
+- HTTP log
+
+Other
+
+- Docs
 - tests
 - Hosts?
 - parse status code thingy `200.json`;
 - util/writeMockToRes: set headers and stuff
-- sorting is wonky for alpha route names?
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
 - Ditto sync other way. Would need fancier ui, with sse or whatever
   Would need that anyway for request log / inspection
 - tabelize the markup in web ui?
-- Remove selected prop in inquire.
 - Less classy express thingy
-- Support explicit hid in handler names
-- cli for selecting a hid via http?
 
 ## Notes
-
 
 ```
 const {
