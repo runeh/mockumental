@@ -89,6 +89,8 @@ A directory that represents a mock service could look like this:
 - Hosts?
 - parse status code thingy `200.json`;
 - util/writeMockToRes: set headers and stuff
+- get rid of routeId, use only handlerId for activation?
+- default selection should happen after sorting. So not be 404 is there is 200
 
 ## Notes
 
