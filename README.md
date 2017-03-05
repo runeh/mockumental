@@ -93,6 +93,11 @@ A directory that represents a mock service could look like this:
 - default selection should happen after sorting. So not be 404 is there is 200
 - Massage markup for web admin UI? bake in selected status?
 - JSON http api responses. See point above for data format.
+- Can we trigger repaint of the cli when web UI changes? With the RX
+  stuff I guess? Would be neat.
+- link to mount point in web admin
+- Ditto sync other way. Would need fancier ui, with sse or whatever
+  Would need that anyway for request log / inspection
 
 ## Notes
 
