@@ -72,9 +72,6 @@ A directory that represents a mock service could look like this:
 
 Core 
 
-- isStatic and isDynamic stuff: so `.json.js` should run the js to create the
-  json.
-- Care about accept types? Sounds like too much work for too little utility?
 - handler.proxy
 - handler.proxyonce (means statefulness somewhere)
   - Could be generic '.cache.' which'll just persist whatever, regardless
@@ -85,6 +82,7 @@ Core
 - Support explicit hid in handler names
 - .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
 - Promises. Like from dynamic handlers
+- mime types are probably broken for dynaic handlers
 
 CLI
 
@@ -103,7 +101,7 @@ Other
 - Docs
 - tests
 - Hosts?
-- parse status code thingy `200.json`;
+- parse status code thingy `200.json`; See skipped test
 - util/writeMockToRes: set headers and stuff
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
