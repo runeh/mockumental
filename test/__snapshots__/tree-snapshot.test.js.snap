@@ -5,6 +5,7 @@ Array [
   Object {
     "handlers": Array [
       Object {
+        "current": true,
         "handlerId": "r1h1",
         "handlerType": "static",
         "isDefaultHandler": false,
@@ -18,6 +19,7 @@ Array [
         "type": "json",
       },
       Object {
+        "current": false,
         "handlerId": "r1h2",
         "handlerType": "static",
         "isDefaultHandler": false,
