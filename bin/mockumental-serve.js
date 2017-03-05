@@ -50,5 +50,5 @@ app.use(mountPoint, mocker.router);
 
 const listener = app.listen(port, ip, function() {
     console.log(`Hosting ${ mockRootDir }  on http://localhost:${ port }${ mountPoint }`);
-    // aquireGuiSelection();
+    aquireGuiSelection();
 });
