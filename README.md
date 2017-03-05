@@ -73,7 +73,6 @@ A directory that represents a mock service could look like this:
 - isStatic and isDynamic stuff: so `.json.js` should run the js to create the
   json.
 - Web Fancyness
-- HTTP api
 - HTTP log
 - Use chalk for colors and stuff. Harder.
 - "quit" and "show" routes in cli?
@@ -91,8 +90,6 @@ A directory that represents a mock service could look like this:
 - util/writeMockToRes: set headers and stuff
 - get rid of routeId, use only handlerId for activation?
 - default selection should happen after sorting. So not be 404 is there is 200
-- Massage markup for web admin UI? bake in selected status?
-- JSON http api responses. See point above for data format.
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
 - link to mount point in web admin
