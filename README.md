@@ -109,6 +109,7 @@ Other
   Would need that anyway for request log / inspection
 - tabelize the markup in web ui?
 - Less classy express thingy
+- Adde debug module perhaps?
 
 ## Notes
 
