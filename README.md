@@ -72,7 +72,7 @@ A directory that represents a mock service could look like this:
 
 - isStatic and isDynamic stuff: so `.json.js` should run the js to create the
   json.
-- Web UI
+- Web Fancyness
 - HTTP api
 - HTTP log
 - Use chalk for colors and stuff. Harder.
@@ -98,6 +98,8 @@ A directory that represents a mock service could look like this:
 - link to mount point in web admin
 - Ditto sync other way. Would need fancier ui, with sse or whatever
   Would need that anyway for request log / inspection
+- tabelize the markup in web ui
+- Remove selected prop in inquire.
 
 ## Notes
 
