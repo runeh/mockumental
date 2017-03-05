@@ -91,6 +91,8 @@ A directory that represents a mock service could look like this:
 - util/writeMockToRes: set headers and stuff
 - get rid of routeId, use only handlerId for activation?
 - default selection should happen after sorting. So not be 404 is there is 200
+- Massage markup for web admin UI? bake in selected status?
+- JSON http api responses. See point above for data format.
 
 ## Notes
 
