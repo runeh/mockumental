@@ -83,7 +83,7 @@ A directory that represents a mock service could look like this:
 - handler.proxyonce (means statefulness somewhere)
   - Could be generic '.cache.' which'll just persist whatever, regardless
     if it came from proxy or file or script. Can be valuable for script
-    as well I guess?
+    as well I guess? Cache on handler or path? Path is better presumably
 - handler.500ms.json
 - tests
 - Hosts?
@@ -100,6 +100,9 @@ A directory that represents a mock service could look like this:
   Would need that anyway for request log / inspection
 - tabelize the markup in web ui
 - Remove selected prop in inquire.
+- Less classy express thingy
+- Support explicit rid
+- cli for selecting a rid via http?
 
 ## Notes
 
