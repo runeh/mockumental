@@ -37,7 +37,7 @@ const mocker = new ExpressMockumental(mockRootDir);
 function aquireGuiSelection() {
     handlerSelector(mocker.getRoutes()).then(function(answers) {
         const { handler: { routeId, handlerId } } = answers;
-        mocker.setHandler(routeId, handlerId);
+        mocker.activateHandler(handlerId);
         return aquireGuiSelection();
     });
 }
