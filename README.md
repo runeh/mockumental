@@ -88,18 +88,16 @@ A directory that represents a mock service could look like this:
 - Hosts?
 - parse status code thingy `200.json`;
 - util/writeMockToRes: set headers and stuff
-- get rid of routeId, use only handlerId for activation?
-- default selection should happen after sorting. So not be 404 is there is 200
+- sorting is wonky for alpha route names?
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
-- link to mount point in web admin
 - Ditto sync other way. Would need fancier ui, with sse or whatever
   Would need that anyway for request log / inspection
-- tabelize the markup in web ui
+- tabelize the markup in web ui?
 - Remove selected prop in inquire.
 - Less classy express thingy
-- Support explicit rid
-- cli for selecting a rid via http?
+- Support explicit hid in handler names
+- cli for selecting a hid via http?
 
 ## Notes
 
