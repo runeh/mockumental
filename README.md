@@ -79,7 +79,7 @@ mocker
       console.log(`no handler for ${ method }: ${ path }`)
     }
   });
-
+```
 
 #### Mockumental class
 
