@@ -68,16 +68,65 @@ A directory that represents a mock service could look like this:
   to urls with extensions. So one might have the folder name `/userdata.json`
   which contains multiple handlers for the path.
 
-## todo:
+## Todo:
 
-- isStatic and isDynamic stuff: so `.json.js` should run the js to create the
-  json.
-- CORS
-- Web UI
-- Route sorting
-- use built in routing API
-- Use chalk for colors and stuff
-- rename paths to routes in mw?
+Core 
+
+- handler.proxy
+- handler.proxyonce (means statefulness somewhere)
+  - Could be generic '.cache.' which'll just persist whatever, regardless
+    if it came from proxy or file or script. Can be valuable for script
+    as well I guess? Cache on handler or path? Path is better presumably
+- handler.500ms.json
+- sorting is wonky for alpha route names?
+- Support explicit hid in handler names
+- .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
+- Promises. Like from dynamic handlers
+- mime types are probably broken for dynaic handlers
+- Error out if using a status in a proxy handler name
+- support 'ANY' method for proxying
+- support 'ANY' for other stuff?
+
+CLI
+
+- Use chalk for colors and stuff. Harder.
 - "quit" and "show" routes in cli?
-- Care about accept types? Sounds like too much work for too little utility?
+- Remove selected prop in inquire.
+- cli for selecting a hid via http?
+- Use commander for defaults, like mount and port?
+- path prefix / leading and trailing slash on console output
+
+Webui
+
+- Web Fancyness
+- HTTP log
+- Show handler type. mime type and proxy url etc
+
+Other
+
 - Docs
+- tests
+- Hosts?
+- parse status code thingy `200.json`; See skipped test
+- util/writeMockToRes: set headers and stuff
+  - Can use this in express as well, sturdier when proxying maybe
+- For above, assume request objects are just node ones?
+- Can we trigger repaint of the cli when web UI changes? With the RX
+  stuff I guess? Would be neat.
+- Ditto sync other way. Would need fancier ui, with sse or whatever
+  Would need that anyway for request log / inspection
+- tabelize the markup in web ui?
+- Less classy express thingy
+- Added debug module perhaps?
+- Prefix path stuff in snapshot tests
+
+## Notes
+
+```
+const {
+  status,
+  contentType,
+  headers,
+  body(promise/stream/string/object?)
+}
+```

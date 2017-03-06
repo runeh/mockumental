@@ -6,8 +6,8 @@ const express = require('express');
 const program = require('commander');
 const cors = require('cors');
 
-const { middleware } = require('../lib/express');
-const { handlerSelector } = require('../lib/inquirer');
+const { ExpressMockumental } = require('../lib/cli-utils/express');
+const { handlerSelector } = require('../lib/cli-utils/inquirer');
 
 program
     .usage('[options] <directory>')
@@ -30,14 +30,13 @@ const ip = program.ip || '0.0.0.0';
 
 const app = express();
 
-// fixme: assert that dir exists
-const mock = middleware(mockRootDir);
+const mocker = new ExpressMockumental(mockRootDir);
 
-// fixme: move cli utils into separate package
+
 function aquireGuiSelection() {
-    handlerSelector(mock.paths, mock.activations).then(function(answers) {
+    handlerSelector(mocker.getRoutes()).then(function(answers) {
         const { handler: { routeId, handlerId } } = answers;
-        mock.setHandler(routeId, handlerId);
+        mocker.activateHandler(handlerId);
         return aquireGuiSelection();
     });
 }
@@ -46,9 +45,15 @@ if (program.cors) {
     app.use(cors());
 }
 
-app.use(mountPoint, mock.router);
+app.use(mountPoint, mocker.router);
 
 const listener = app.listen(port, ip, function() {
-    console.log(`Hosting ${ mockRootDir }  on http://localhost:${ port }${ mountPoint }`);
+    console.log(`Hosting ${ mockRootDir } on http://localhost:${ port }${ mountPoint }`);
+    if (mountPoint.endsWith('/')) {
+        console.log(`Admin UI on http://localhost:${ port }${ mountPoint }__admin`);
+    }
+    else {
+        console.log(`Admin UI on http://localhost:${ port }${ mountPoint }/__admin`);
+    }
     aquireGuiSelection();
 });
