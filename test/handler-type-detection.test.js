@@ -25,3 +25,7 @@ test('static when js and no other extension', () => {
         .toBe('static');
 });
 
+test('proxy handler', () => {
+    expect(getHandlerType('ok.proxy'))
+        .toBe('proxy');
+});

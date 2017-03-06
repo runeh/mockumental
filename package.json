@@ -18,6 +18,8 @@
         "pad": "^1.1.0",
         "path-to-regexp": "^1.7.0",
         "prettyjson": "^1.2.1",
+        "request": "^2.80.0",
+        "request-promise-native": "^1.0.3",
         "wayfarer": "^6.4.0"
     },
     "scripts": {

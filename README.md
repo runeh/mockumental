@@ -83,6 +83,9 @@ Core
 - .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
 - Promises. Like from dynamic handlers
 - mime types are probably broken for dynaic handlers
+- Error out if using a status in a proxy handler name
+- support 'ANY' method for proxying
+- support 'ANY' for other stuff?
 
 CLI
 
@@ -95,6 +98,7 @@ Webui
 
 - Web Fancyness
 - HTTP log
+- Show handler type
 
 Other
 
@@ -103,6 +107,7 @@ Other
 - Hosts?
 - parse status code thingy `200.json`; See skipped test
 - util/writeMockToRes: set headers and stuff
+  - Can use this in express as well, sturdier when proxying maybe
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
 - Ditto sync other way. Would need fancier ui, with sse or whatever
