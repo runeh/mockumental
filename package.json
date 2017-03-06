@@ -1,7 +1,7 @@
 {
-    "name": "mocumental",
+    "name": "mockumental",
     "version": "1.0.0",
-    "main": "./lib/mockumental.js",
+    "main": "./lib/index.js",
     "bin": "./bin/mockumental.js",
     "repository": {},
     "license": "MIT",
