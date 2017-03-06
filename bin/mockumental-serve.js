@@ -13,7 +13,7 @@ program
     .usage('[options] <directory>')
     .option('-u, --interactive', 'show interactive cli ui')
     .option('-p, --port <port>', 'port to bind to (default 3031)', parseInt, 3031)
-    .option('-i, --ip <ip>', 'host / ip to bind to (default 0.0.0.0', '0.0.0.0')
+    .option('-i, --ip <ip>', 'host / ip to bind to (default localhost', 'localhost')
     .option('-m, --mount <path>', 'mount point', '/')
     .option('-c, --cors', 'enable CORS')
     .parse(process.argv);
@@ -48,8 +48,9 @@ if (program.cors) {
 
 app.use(mountPoint, mocker.router);
 
-const listener = app.listen(program.port, program.ip, function() {
-    console.log(`Hosting ${ mockRootDir } on http://localhost:${ program.port }${ mountPoint }`);
-    console.log(`Admin UI on http://localhost:${ program.port }${ mountPoint }__admin`);
+const server = app.listen(program.port, program.ip, () => {
+    const { address, port } = server.address();
+    console.log(`Hosting ${ mockRootDir } on http://${ address }:${ port }${ mountPoint }`);
+    console.log(`Admin UI on http://${ address }:${ port }${ mountPoint }__admin`);
     aquireGuiSelection();
 });

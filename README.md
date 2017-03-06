@@ -193,7 +193,6 @@ CLI
 - Remove selected prop in inquire.
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
-- show port and ip from connection object
 - 'explain' command?
 
 Webui
