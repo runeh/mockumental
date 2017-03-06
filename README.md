@@ -175,10 +175,7 @@ A directory that represents a mock service could look like this:
 Core 
 
 - handler.proxy
-- handler.proxyonce (means statefulness somewhere)
-  - Could be generic '.cache.' which'll just persist whatever, regardless
-    if it came from proxy or file or script. Can be valuable for script
-    as well I guess? Cache on handler or path? Path is better presumably
+- .cache. On path, qs, args?
 - handler.500ms.json
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
@@ -195,9 +192,9 @@ CLI
 - "quit" and "show" routes in cli?
 - Remove selected prop in inquire.
 - cli for selecting a hid via http?
-- Use commander for defaults, like mount and port?
-- path prefix / leading and trailing slash on console output
 - prettyprint flag on json list?
+- show port and ip from connection object
+- 'explain' command?
 
 Webui
 
