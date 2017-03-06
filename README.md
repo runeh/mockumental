@@ -93,12 +93,14 @@ CLI
 - "quit" and "show" routes in cli?
 - Remove selected prop in inquire.
 - cli for selecting a hid via http?
+- Use commander for defaults, like mount and port?
+- path prefix / leading and trailing slash on console output
 
 Webui
 
 - Web Fancyness
 - HTTP log
-- Show handler type
+- Show handler type. mime type and proxy url etc
 
 Other
 
@@ -108,13 +110,15 @@ Other
 - parse status code thingy `200.json`; See skipped test
 - util/writeMockToRes: set headers and stuff
   - Can use this in express as well, sturdier when proxying maybe
+- For above, assume request objects are just node ones?
 - Can we trigger repaint of the cli when web UI changes? With the RX
   stuff I guess? Would be neat.
 - Ditto sync other way. Would need fancier ui, with sse or whatever
   Would need that anyway for request log / inspection
 - tabelize the markup in web ui?
 - Less classy express thingy
-- Adde debug module perhaps?
+- Added debug module perhaps?
+- Prefix path stuff in snapshot tests
 
 ## Notes
 
