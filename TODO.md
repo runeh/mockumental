@@ -13,6 +13,8 @@ Core
 - support 'ANY' method for proxying
 - support 'ANY' for other stuff?
 - inferer / handler field for extension
+- add `handleRequest` that takes node request obj? Maybe even takes
+  optional response object to write to.
 
 CLI
 
@@ -51,3 +53,4 @@ Other
 - Less classy express thingy
 - Added debug module perhaps?
 - Prefix path stuff in snapshot tests
+- use METHODS and STATUS_CODES from http module?
