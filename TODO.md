@@ -15,6 +15,7 @@ Core
 - inferer / handler field for extension
 - add `handleRequest` that takes node request obj? Maybe even takes
   optional response object to write to.
+- Check sorting that picks out default selected.
 
 CLI
 
@@ -37,6 +38,7 @@ Tests
 - Tree munging
 - Express
 - Mime type / extension stuff for dynamic routes
+- query args for proxying. Define what happens if both have them.
 
 Other
 
