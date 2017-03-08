@@ -5,10 +5,9 @@ test('no default', () => {
         .toBe(false);
 });
 
-// fixme: what should the sematics of this be?
-test.skip('default as file name', () => {
+test('default as file name', () => {
     expect(inferDefault('default.json'))
-        .toBe(false);
+        .toBe(true);
 });
 
 test('default dotted', () => {

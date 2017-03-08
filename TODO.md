@@ -18,7 +18,6 @@ Core
 - inferer / handler field for extension
 - add `handleRequest` that takes node request obj? Maybe even takes
   optional response object to write to.
-- Check sorting that picks out default selected.
 - `.proxy.js` for dynamic proxy targets. Needed? Overkill? Might be useful
   for wildcard paths. Might not matter, better to just create explicit
   proxy routes in that case.
