@@ -43,6 +43,7 @@ Webui
 Tests
 
 - More inferers
+  - For extensions
 - Tree munging
 - Express
 - Mime type / extension stuff for dynamic routes
