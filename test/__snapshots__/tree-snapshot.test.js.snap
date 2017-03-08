@@ -17,6 +17,7 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "handlerType": "static",
                 "proxyUrl": null,
                 "mimeType": "application/json",
+                "relPath": "/maintenance.200.json",
                 "current": true,
                 "routeId": "r1",
                 "handlerId": "r1h1"
@@ -32,6 +33,7 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "handlerType": "static",
                 "proxyUrl": null,
                 "mimeType": "application/json",
+                "relPath": "/ok.json",
                 "current": false,
                 "routeId": "r1",
                 "handlerId": "r1h2"
