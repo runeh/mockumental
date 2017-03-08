@@ -53,7 +53,6 @@ Other
 
 - Docs
 - Hosts?
-- parse status code thingy `200.json`; See skipped test
 - util/writeMockToRes: set headers and stuff
   - Can use this in express as well, sturdier when proxying maybe
 - For above, assume request objects are just node ones?

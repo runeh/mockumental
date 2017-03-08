@@ -11,7 +11,7 @@ test('explicit dotted status 200', () => {
 });
 
 // fixme: figure out semantics of this
-test.skip('status as file name', () => {
+test('status as file name', () => {
     expect(inferStatusCode('506.json'))
         .toBe(506);
 });
