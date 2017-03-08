@@ -3,10 +3,10 @@ module.exports = {
     env: {
         es6: true,
         node: true,
-        'jest/globals': true // fixme: namespaced to test dir?
+        'jest/globals': true, // fixme: namespaced to test dir?
     },
     parserOptions: {
-        ecmaVersion: 6
+        ecmaVersion: 6,
     },
     extends: 'eslint:recommended',
     rules: {
@@ -23,14 +23,30 @@ module.exports = {
                 objects: 'always-multiline',
                 imports: 'always-multiline',
                 exports: 'always-multiline',
-                functions: 'never'
-            }
+                functions: 'never',
+            },
         ],
         'consistent-return': 'error',
         'template-curly-spacing': ['error', 'always'],
         'prefer-template': 'warn',
         'no-new-symbol': 'error',
         'prefer-const': 'error',
-        'no-multi-spaces': 'error'
-    }
+        'no-multi-spaces': 'error',
+        'no-const-assign': 1,
+        'no-extra-semi': 0,
+        semi: 0,
+        'no-fallthrough': 0,
+        'no-empty': 0,
+        'no-mixed-spaces-and-tabs': 0,
+        'no-redeclare': 0,
+        'no-this-before-super': 1,
+        'no-undef': 1,
+        'no-unreachable': 1,
+        'no-use-before-define': 0,
+        'constructor-super': 1,
+        curly: 0,
+        eqeqeq: 0,
+        'func-names': 0,
+        'valid-typeof': 1,
+    },
 };
