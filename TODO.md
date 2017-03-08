@@ -2,7 +2,6 @@
 
 Core 
 
-- Deal with query strings
 - .cache. On path, qs, args?
 - handler.500ms.json
   - Resolve the delay in `executeHandler`, or leave it to users?
@@ -23,6 +22,8 @@ Core
 - `.proxy.js` for dynamic proxy targets. Needed? Overkill? Might be useful
   for wildcard paths. Might not matter, better to just create explicit
   proxy routes in that case.
+- Semantics for merging query params for proxying
+- Calling convention for dynamic handlers re path, query and body
 
 CLI
 
