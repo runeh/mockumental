@@ -83,19 +83,19 @@ mocker
 
 #### Mockumental class
 
-#### `constructor(rootDir)`
+##### `constructor(rootDir)`
 
-#### `getRoutes()`
+##### `getRoutes()`
 
 Returns a list of routes, and the handlers for each route
 
-#### `activateHandler(handlerId)`
+##### `activateHandler(handlerId)`
 
 Make the handler identified by `handlerId` active. 
 
 Note: Handler IDs are unique so there is no need to specify the route ID.
 
-#### `handle(path, method)`
+##### `handle(path, method)`
 
 Tries to find a handler matching the path and method. Returns a promise.
 
@@ -109,7 +109,40 @@ fixme: response object docs and more args
 
 ### Express integration
 
-fixme: document the middleware
+Mockumental has out of the box support for express.
+
+This code would expose mocks on the `/mocks` path of an app:
+
+```
+const express = require('express');
+
+// fixme: path
+const { ExpressMockumental } = require('../lib/cli-utils/express');
+
+const app = express();
+const mocker = new ExpressMockumental(mockRootDir);
+
+app.use('/mocks', mocker.router);
+```
+
+#### ExpressMockumental class
+
+##### `constructor(mocksRoot)`
+
+Creates a wrapper arond a regular `Mockumental` object,
+
+##### `router`
+
+Property that contains an express router. 
+
+##### `activateHandler(hid)`
+
+Same as for `Mockumental` class
+
+##### `getRoutes()`
+
+Same as for `Mockumental` class
+
 
 ## Mock directory structure
 
