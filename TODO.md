@@ -5,6 +5,7 @@ Core
 - Deal with query strings
 - .cache. On path, qs, args?
 - handler.500ms.json
+  - Resolve the delay in `executeHandler`, or leave it to users?
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
 - .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
@@ -12,6 +13,9 @@ Core
 - Error out if using a status in a proxy handler name
 - support 'ANY' method for proxying
 - support 'ANY' for other stuff?
+- support 'ANY' for status for proxying at least, needs to
+  - show it in the ui
+  - bail if setting status in name
 - inferer / handler field for extension
 - add `handleRequest` that takes node request obj? Maybe even takes
   optional response object to write to.
