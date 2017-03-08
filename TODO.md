@@ -2,7 +2,7 @@
 
 Core 
 
-- handler.proxy
+- Deal with query strings
 - .cache. On path, qs, args?
 - handler.500ms.json
 - sorting is wonky for alpha route names?
@@ -25,6 +25,7 @@ CLI
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
+- 'back' in handler selection
 
 Webui
 
@@ -54,5 +55,4 @@ Other
   Would need that anyway for request log / inspection
 - Less classy express thingy
 - Added debug module perhaps?
-- Prefix path stuff in snapshot tests
 - use METHODS and STATUS_CODES from http module?
