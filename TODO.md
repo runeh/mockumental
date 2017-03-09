@@ -32,7 +32,6 @@ CLI
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
-- show right extension in cli
 
 Webui
 
@@ -61,3 +60,4 @@ Other
 - Less classy express thingy
 - Added debug module perhaps?
 - use METHODS and STATUS_CODES from http module?
+- ANY extension thingy for UI on proxy routes
