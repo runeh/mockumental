@@ -40,6 +40,107 @@ exports[`dir parsing snapshot smoke test 1`] = `
             }
         ],
         "routeId": "r1"
+    },
+    {
+        "path": "/user",
+        "method": "GET",
+        "handlers": [
+            {
+                "method": "GET",
+                "name": "found.json",
+                "path": "/fixture-tree/user/found.json",
+                "prettyName": "found",
+                "isDefaultHandler": false,
+                "status": 200,
+                "extension": "json",
+                "mimeType": "application/json",
+                "handlerType": "static",
+                "proxyUrl": null,
+                "relPath": "/user/found.json",
+                "current": true,
+                "routeId": "r2",
+                "handlerId": "r2h1"
+            },
+            {
+                "method": "GET",
+                "name": "not-found.404.json",
+                "path": "/fixture-tree/user/not-found.404.json",
+                "prettyName": "not found",
+                "isDefaultHandler": false,
+                "status": 404,
+                "extension": "json",
+                "mimeType": "application/json",
+                "handlerType": "static",
+                "proxyUrl": null,
+                "relPath": "/user/not-found.404.json",
+                "current": false,
+                "routeId": "r2",
+                "handlerId": "r2h2"
+            }
+        ],
+        "routeId": "r2"
+    },
+    {
+        "path": "/user",
+        "method": "POST",
+        "handlers": [
+            {
+                "method": "POST",
+                "name": "update.POST.json",
+                "path": "/fixture-tree/user/update.POST.json",
+                "prettyName": "update",
+                "isDefaultHandler": false,
+                "status": 200,
+                "extension": "json",
+                "mimeType": "application/json",
+                "handlerType": "static",
+                "proxyUrl": null,
+                "relPath": "/user/update.POST.json",
+                "current": true,
+                "routeId": "r3",
+                "handlerId": "r3h3"
+            }
+        ],
+        "routeId": "r3"
+    },
+    {
+        "path": "/:market",
+        "method": "GET",
+        "handlers": [
+            {
+                "method": "GET",
+                "name": "cars.json",
+                "path": "/fixture-tree/MARKET/cars.json",
+                "prettyName": "cars",
+                "isDefaultHandler": false,
+                "status": 200,
+                "extension": "json",
+                "mimeType": "application/json",
+                "handlerType": "static",
+                "proxyUrl": null,
+                "relPath": "/MARKET/cars.json",
+                "current": true,
+                "routeId": "r4",
+                "handlerId": "r4h1"
+            },
+            {
+                "method": "GET",
+                "name": "realestate.json",
+                "path": "/fixture-tree/MARKET/realestate.json",
+                "prettyName": "realestate",
+                "isDefaultHandler": false,
+                "status": 200,
+                "extension": "json",
+                "mimeType": "application/json",
+                "handlerType": "static",
+                "proxyUrl": null,
+                "relPath": "/MARKET/realestate.json",
+                "current": false,
+                "routeId": "r4",
+                "handlerId": "r4h2"
+            }
+        ],
+        "routeId": "r4"
     }
 ]
 `;
