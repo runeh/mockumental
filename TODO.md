@@ -32,6 +32,7 @@ CLI
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
+- Show proxy properly, without extension
 
 Webui
 
@@ -43,7 +44,6 @@ Tests
 - More inferers
 - Tree munging
 - Express
-- Mime type / extension stuff for script routes
 - query args for proxying. Define what happens if both have them.
 
 Other
@@ -57,7 +57,7 @@ Other
   stuff I guess? Would be neat.
 - Ditto sync other way. Would need fancier ui, with sse or whatever
   Would need that anyway for request log / inspection
-- Less classy express thingy
+- Less classy express thingy?
 - Added debug module perhaps?
 - use METHODS and STATUS_CODES from http module?
 - ANY extension thingy for UI on proxy routes
