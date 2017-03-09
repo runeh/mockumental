@@ -24,6 +24,7 @@ Core
 - Semantics for merging query params for proxying
 - Calling convention for dynamic handlers re path, query and body
 - Pidfile / persist previous state?
+- use mime module for extensions whitelist etc
 
 CLI
 
@@ -36,12 +37,10 @@ Webui
 
 - Web Fancyness
 - HTTP log
-- Show handler type. mime type and proxy url etc
 
 Tests
 
 - More inferers
-  - For extensions
 - Tree munging
 - Express
 - Mime type / extension stuff for dynamic routes
