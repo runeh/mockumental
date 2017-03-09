@@ -23,16 +23,14 @@ Core
   proxy routes in that case.
 - Semantics for merging query params for proxying
 - Calling convention for dynamic handlers re path, query and body
+- Pidfile / persist previous state?
 
 CLI
 
 - Use chalk for colors and stuff. Harder.
-- "quit" and "show" routes in cli?
-- Remove selected prop in inquire.
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
-- 'back' in handler selection
 
 Webui
 
