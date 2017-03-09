@@ -17,13 +17,12 @@ Core
 - inferer / handler field for extension
 - add `handleRequest` that takes node request obj? Maybe even takes
   optional response object to write to.
-- `.proxy.js` for dynamic proxy targets. Needed? Overkill? Might be useful
+- `.proxy.js` for script proxy targets. Needed? Overkill? Might be useful
   for wildcard paths. Might not matter, better to just create explicit
   proxy routes in that case.
 - Semantics for merging query params for proxying
-- Calling convention for dynamic handlers re path, query and body
+- Calling convention for script handlers re path, query and body
 - Pidfile / persist previous state?
-- rename 'dynamic' to 'script' as handler type name
 - throw when non-usable file find or null it?
 
 CLI
@@ -43,7 +42,7 @@ Tests
 - More inferers
 - Tree munging
 - Express
-- Mime type / extension stuff for dynamic routes
+- Mime type / extension stuff for script routes
 - query args for proxying. Define what happens if both have them.
 
 Other

@@ -185,7 +185,7 @@ A directory that represents a mock service could look like this:
     - `update-user.PUT.json`
 - File extensions are assumed to match the mime type of the document. Thus
   thus `.json`, `.html`, `.png` etc. should just work.
-- File extensions ending in `.js` are treated as a dynamic handler if the
+- File extensions ending in `.js` are treated as a script handler if the
   second most extension matches a static file type we know about. Thus it's
   possible to write a javascript handler that runs som code to emit the
   response. For example `ok.json.js` will run the js in the file, and

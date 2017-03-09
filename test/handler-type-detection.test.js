@@ -15,9 +15,9 @@ test('static html type, works in concert with other opts', () => {
         .toBe('static');
 });
 
-test('dynamic json type', () => {
+test('script json type', () => {
     expect(getHandlerType('ok.json.js'))
-        .toBe('dynamic');
+        .toBe('script');
 });
 
 test('static when js and no other extension', () => {

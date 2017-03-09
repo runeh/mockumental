@@ -10,12 +10,12 @@ test('static js type', () => {
         .toBe('js');
 });
 
-test('dynamic json type', () => {
+test('script json type', () => {
     expect(inferExtension('ok.json.js'))
         .toBe('json');
 });
 
-test('dynamic json type, json as handler name', () => {
+test('script json type, json as handler name', () => {
     expect(inferExtension('json.js'))
         .toBe('json');
 });
