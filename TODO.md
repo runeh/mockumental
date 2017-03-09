@@ -24,6 +24,7 @@ Core
 - Calling convention for script handlers re path, query and body
 - Pidfile / persist previous state?
 - throw when non-usable file find or null it?
+- Resolve retval from handlers so script handlers can do promises.
 
 CLI
 
