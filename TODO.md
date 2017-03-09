@@ -25,6 +25,8 @@ Core
 - Calling convention for dynamic handlers re path, query and body
 - Pidfile / persist previous state?
 - use mime module for extensions whitelist etc
+- rename 'dynamic' to 'script' as handler type name
+- throw when non-usable file find or null it?
 
 CLI
 
