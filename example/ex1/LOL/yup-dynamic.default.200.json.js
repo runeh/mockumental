@@ -1,11 +1,9 @@
-
-function handler(routeParams, request, memo) {
+function handler(req, routeParams, memo) {
     memo.counter = memo.counter || 0;
     memo.counter++;
     return `
         Dynamic handler yo!
         ${ JSON.stringify(routeParams) }
-        ${ JSON.stringify(request) }
         ${ JSON.stringify(memo) }
     `;
 }

@@ -8,7 +8,6 @@ Core
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
 - .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
-- mime types are probably broken for dynaic handlers
 - Error out if using a status in a proxy handler name
 - support 'ANY' method for proxying
 - support 'ANY' for other stuff?
@@ -24,7 +23,6 @@ Core
 - Semantics for merging query params for proxying
 - Calling convention for dynamic handlers re path, query and body
 - Pidfile / persist previous state?
-- use mime module for extensions whitelist etc
 - rename 'dynamic' to 'script' as handler type name
 - throw when non-usable file find or null it?
 
@@ -34,6 +32,7 @@ CLI
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
+- show right extension in cli
 
 Webui
 
