@@ -1,6 +1,6 @@
-## Todo:
+# Todo:
 
-Core 
+## Core 
 
 - .cache. On path, qs, args?
 - handler.500ms.json
@@ -26,27 +26,26 @@ Core
 - throw when non-usable file find or null it?
 - Resolve retval from handlers so script handlers can do promises.
 
-CLI
+## CLI
 
 - Use chalk for colors and stuff. Harder.
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
-- Show proxy properly, without extension
 
-Webui
+## Webui
 
 - Web Fancyness
 - HTTP log
 
-Tests
+## Tests
 
 - More inferers
 - Tree munging
 - Express
 - query args for proxying. Define what happens if both have them.
 
-Other
+## Other
 
 - Docs
 - Hosts?
