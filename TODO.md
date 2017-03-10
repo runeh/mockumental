@@ -3,8 +3,6 @@
 ## Core 
 
 - .cache. On path, qs, args?
-- handler.500ms.json
-  - Resolve the delay in `executeHandler`, or leave it to users?
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
 - .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
@@ -25,6 +23,7 @@
 - Pidfile / persist previous state?
 - throw when non-usable file find or null it?
 - Resolve retval from handlers so script handlers can do promises.
+- Delay code that tries to compensate for handler duration? Overkill?
 
 ## CLI
 
@@ -32,11 +31,13 @@
 - cli for selecting a hid via http?
 - prettyprint flag on json list?
 - 'explain' command?
+- show delay
 
 ## Webui
 
 - Web Fancyness
 - HTTP log
+- show delay
 
 ## Tests
 
