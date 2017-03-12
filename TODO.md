@@ -40,7 +40,8 @@
 - lower case method names? so 'post.json' works?
 - Support buffers as retval from script handlers
 - caching
-
+- Throw on unknown method?
+- Validate status?
 
 ## CLI
 
@@ -89,5 +90,5 @@
   Would need that anyway for request log / inspection
 - Less classy express thingy?
 - Added debug module perhaps?
-- use METHODS and STATUS_CODES from http module?
+- use STATUS_CODES from http module?
 - ANY extension thingy for UI on proxy routes
