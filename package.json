@@ -1,10 +1,10 @@
 {
     "name": "mockumental",
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.1",
     "main": "./lib/index.js",
     "bin": "./bin/mockumental.js",
-    "repository": {},
-    "license": "MIT",
+    "repository": "https://github.com/runeh/mockumental.git",
+    "license": "BSD-3-Clause",
     "dependencies": {
         "body-parser": "^1.17.1",
         "chalk": "^1.1.3",
@@ -20,9 +20,6 @@
         "prettyjson": "^1.2.1",
         "request": "^2.81.0",
         "request-promise-native": "^1.0.3"
-    },
-    "scripts": {
-        "start": "node index-express-cli.js"
     },
     "devDependencies": {
         "eslint": "^3.17.1",
