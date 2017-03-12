@@ -2,6 +2,7 @@
 
 ## Core 
 
+- Remove cache code until it's implemented
 - .cache. On path, qs, args?
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
@@ -24,6 +25,15 @@
 - throw when non-usable file find or null it?
 - Resolve retval from handlers so script handlers can do promises.
 - Delay code that tries to compensate for handler duration? Overkill?
+- Support for `.html.json` where the json body contains same as a
+  mockumental response. body, headers, whatnot
+  - Perhaps naming should be .resjson or something? 
+- Support string or object as retval fron script handlers. If object, treat
+  as mockumental response?
+- Split up handler name parsing and handler loading, for testing and
+  to be able to implement the `describe` command
+- Optional dash in name delay directive?
+
 
 ## CLI
 
@@ -33,11 +43,13 @@
 - 'explain' command?
 - show delay
 
+
 ## Webui
 
 - Web Fancyness
 - HTTP log
 - show delay
+
 
 ## Tests
 
@@ -45,10 +57,21 @@
 - Tree munging
 - Express
 - query args for proxying. Define what happens if both have them.
+- assertions for handler name parsing
+  - Only a single status code allowed
+
+
+## Docs
+
+- Clean up example dirs
+- Screenshot / screen cast thingies
+- Calling conventions / object types for script handlers req / res objects
+- Memo object
+- What is synchronous and what isn't
+
 
 ## Other
 
-- Docs
 - Hosts?
 - util/writeMockToRes: set headers and stuff
   - Can use this in express as well, sturdier when proxying maybe
