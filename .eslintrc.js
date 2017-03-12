@@ -3,7 +3,7 @@ module.exports = {
     env: {
         es6: true,
         node: true,
-        'jest/globals': true, // fixme: namespaced to test dir?
+        'jest/globals': true,
     },
     parserOptions: {
         ecmaVersion: 6,

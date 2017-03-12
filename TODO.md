@@ -33,6 +33,13 @@
 - Split up handler name parsing and handler loading, for testing and
   to be able to implement the `describe` command
 - Optional dash in name delay directive?
+- Sanity check hid selection
+- figure out copy / immutability semantics when mutating routes on hid
+  selection
+- Sanity check proxy URL
+- lower case method names? so 'post.json' works?
+- Support buffers as retval from script handlers
+- caching
 
 
 ## CLI
@@ -59,7 +66,7 @@
 - query args for proxying. Define what happens if both have them.
 - assertions for handler name parsing
   - Only a single status code allowed
-
+- namespaced eslint to test dir?
 
 ## Docs
 

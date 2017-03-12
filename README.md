@@ -188,8 +188,6 @@ The promise resolves with `null` if there is no handler.
 The promise resolves with a response object if the handler was found and
 executed.
 
-fixme: response object docs and more args
-
 
 ### Express integration
 
