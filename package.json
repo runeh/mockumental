@@ -1,6 +1,6 @@
 {
     "name": "mockumental",
-    "version": "1.0.0-alpha.1",
+    "version": "1.0.0-alpha.2",
     "main": "./lib/index.js",
     "bin": "./bin/mockumental.js",
     "repository": "https://github.com/runeh/mockumental.git",
