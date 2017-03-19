@@ -6,7 +6,6 @@
 - .cache. On path, qs, args?
 - sorting is wonky for alpha route names?
 - Support explicit hid in handler names
-- .filter(e => isAllowedHandler(e.path)) should filter on bool perhaps
 - Error out if using a status in a proxy handler name
 - support 'ANY' method for proxying
 - support 'ANY' for other stuff?
