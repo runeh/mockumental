@@ -51,7 +51,9 @@ app.use(mountPoint, mocker.router);
 
 const server = app.listen(program.port, program.address, () => {
     const { address, port } = server.address();
+    // eslint-disable-next-line no-console
     console.log(`Hosting ${ mockRootDir } on http://${ address }:${ port }${ mountPoint }`);
+    // eslint-disable-next-line no-console
     console.log(`Admin UI on http://${ address }:${ port }${ mountPoint }__admin`);
     if (!program.nocli) {
         aquireGuiSelection();

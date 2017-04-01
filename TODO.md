@@ -64,7 +64,6 @@
 - query args for proxying. Define what happens if both have them.
 - assertions for handler name parsing
   - Only a single status code allowed
-- namespaced eslint to test dir?
 
 ## Docs
 

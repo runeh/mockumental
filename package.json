@@ -22,11 +22,11 @@
     },
     "devDependencies": {
         "eslint": "^3.19.0",
-        "eslint-plugin-jest": "^19.0.1",
         "jest": "^19.0.2"
     },
     "scripts": {
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "lint": "eslint ./"
     }
 }
