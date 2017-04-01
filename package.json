@@ -21,6 +21,7 @@
         "request-promise-native": "^1.0.3"
     },
     "devDependencies": {
+        "deep-sort-object": "^1.0.1",
         "eslint": "^3.19.0",
         "jest": "^19.0.2"
     },

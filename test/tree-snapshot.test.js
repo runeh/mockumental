@@ -1,5 +1,7 @@
 const { resolve } = require('path');
 
+const sortObject = require('deep-sort-object');
+
 const { load } = require('../lib/dirparser');
 
 function removePathPrefixes(routes) {
@@ -13,7 +15,7 @@ function removePathPrefixes(routes) {
 
 expect.addSnapshotSerializer({
     test: obj => obj,
-    print: routes => JSON.stringify(removePathPrefixes(routes), null, 4),
+    print: routes => JSON.stringify(sortObject(removePathPrefixes(routes)), null, 4),
 });
 
 const fixtureDir = resolve(__dirname, 'fixture-tree');
