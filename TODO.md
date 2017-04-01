@@ -5,7 +5,6 @@
 - Remove cache code until it's implemented
 - .cache. On path, qs, args?
 - sorting is wonky for alpha route names?
-- Support explicit hid in handler names
 - Error out if using a status in a proxy handler name
 - support 'ANY' method for proxying
 - support 'ANY' for other stuff?

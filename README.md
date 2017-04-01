@@ -373,3 +373,11 @@ handler containing javascript. Thus:
 - `debug-tracking-script.js` - a static handler returning a javascript file.
 - `search.json.js` - a script handler responding with the return value of the
   handler as json
+
+#### Handler ID
+
+Handler IDs are assigned automatically when parsing the mock directory.
+In some cases there needs to be a predictable handler ID, so it's possible to
+script changing the handler. In this case adding `name.hid-myhid.json` would
+assign `myhid` as the handler ID. Thus it would be safe to later use the HTTP
+API to activate the `myhid` handler.
