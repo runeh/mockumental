@@ -122,6 +122,16 @@ mockumental list ./path/to/mock/folder
 
 Prints all the mocks in the folder.
 
+### Explain a file name
+
+```
+mockumental explain search.200.POST.PUT.json.js
+```
+
+Explains how mockumental will interpret a file name. Mostly useful for
+debugging and experimentation.
+
+
 ## HTTP API
 
 When requesting the `__admin` URL without an accept header, or with a JSON
