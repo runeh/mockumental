@@ -32,7 +32,6 @@ test('script handler smoke test', () => {
         .toEqual('json');
 });
 
-
 test('Multiple methods cause multiple handlers', () => {
     const handlers = handlersFromPath('ok-handler.299.POST.GET.PUT.json.js');
     expect(handlers.length)
@@ -42,11 +41,11 @@ test('Multiple methods cause multiple handlers', () => {
 
     handler = handlers[0];
     expect(handler.method)
-        .toEqual('POST');
+        .toEqual('GET');
 
     handler = handlers[1];
     expect(handler.method)
-        .toEqual('GET');
+        .toEqual('POST');
 
     handler = handlers[2];
     expect(handler.method)

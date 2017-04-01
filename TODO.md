@@ -66,7 +66,6 @@
 - query args for proxying. Define what happens if both have them.
 - assertions for handler name parsing
   - Only a single status code allowed
-- Handler list is not sorted, tests assume they are in handlers-from-path test
 - Test malformed input to handlers from path
 
 ## Docs
