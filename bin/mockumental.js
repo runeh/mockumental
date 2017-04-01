@@ -8,4 +8,5 @@ program
   .version(pkg.version)
   .command('serve', 'start server', {isDefault: true})
   .command('list', 'show routes')
+  .command('explain', 'explain how a file name will be parsed')
   .parse(process.argv);
