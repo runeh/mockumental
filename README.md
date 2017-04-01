@@ -347,44 +347,6 @@ handler to activate when the server starts. For example
 `many-hits.default.json`. If no default directive is used, the first handler
 is selected. Handlers are sorted by status code, then alphabetically.
 
-### Mime and handler type
-
-There are three types of response handlers:
-
-- Static - Sends the contents of the handler file as the response body.
-- Script - Executes the function in the handler file and sends the return
-  value as the response body. Handler functions may return a string or a
-  promise for a string.
-- Proxy - Forwards the request to a different server and returns the response.
-
-For static and script handlers, there will be a mime type determined by a
-file extension on the handler. For proxy handlers the mime type will be
-whatever the upstream server sends.
-
-If the name of the handler ends with `.proxy`, it will be interpreted as a
-proxy handler. In this case, the file will be read, with the assumption that
-it contains a URL to proxy to. Thus `forward-search-to-prod-api.proxy` is
-a valid name for a proxy handler.
-
-If the name of the handler ends in any known extension except `.js`, it is
-interpreted as a static handler.
-
-Known extensions are determined by using the mapping between extensions and
-mime types in the `mime-types` module. Thus `profile.html`, `api-result.json`
-and `generic-avatar.png` are all valid static handler names.
-
-If the name of the handler ends in `.js` it will be either a static or a
-script handler. If there is another known extension preceding the last one
-of the file name, then the handler is interpreted as a script handler. The
-secondary extension will be used to determine the mime type.
-
-If there is no secondary extension, the handler will be treated as a static
-handler containing javascript. Thus:
-
-- `debug-tracking-script.js` - a static handler returning a javascript file.
-- `search.json.js` - a script handler responding with the return value of the
-  handler as json
-
 #### Handler ID
 
 Handler IDs are assigned automatically when parsing the mock directory.
@@ -392,6 +354,78 @@ In some cases there needs to be a predictable handler ID, so it's possible to
 script changing the handler. In this case adding `name.hid-myhid.json` would
 assign `myhid` as the handler ID. Thus it would be safe to later use the HTTP
 API to activate the `myhid` handler.
+
+
+### Mime and handler type
+
+There are three types of response handlers:
+
+- Static
+- Proxy
+- Script
+
+
+#### Static handlers
+
+A handler file name that ends in an extension with a valid mime type is
+considered to be a static handler.
+
+Static handlers simply returns the contents of the file. The mime type is
+determined by looking at the file extension.
+
+#### Proxy handlers
+
+A handler file name that ends with `.proxy` is considered to be a proxy handler.
+
+Proxy handlers forward requests to an upstream server and returns the body.
+The target URL is read from the file. Thus the contents of a proxy route
+handler should be a string containing a sungle URL.
+
+Note that response code set in the file name is ignored for proxy handlers.
+The response code from the upstream server is used.
+
+
+#### Script handlers
+
+A handler file name that ends with `<mime-extension>.js` is considered a
+script handler. `<mime-extension>` can be any extension with a valid mime
+type. So for example `ok.json.js` is a script handler with the mime type
+of json.
+
+A script handler must be a node module file that exports a single function.
+
+The function must return either a string, or a promise of a string.
+
+The function will be called with three arguments, `params`, `request` and
+`memo`.
+
+- `params` is an object containing any dynamic route params for the handler.
+  Thus if the route handler path was `/user/USER_ID/user-info.200.json.js` and
+  the request path was `/user/runeh/` then the first argument to the function
+  is `{ user_id: 'runeh' }. If there are no route params, an empty object
+  is passed in.
+- `request` is a node.js HTTP request object.
+  **Note**: this will likely change in the future.
+- `memo` is an object that will persist between each invocation of the handler.
+  This means that handlers that want to persist some state or share state
+  between handlers can add things to this object.
+
+Thus a handler may look like this:
+
+```
+function timeStampHandler(routeParams, request, memo) {
+  const lastSeen = memo.lastSeen || Date.now();
+  const response = {
+    date: new Date().toUTCString(),
+    timeSinceLastRequest: Date.now() - lastSeen;
+  };
+  memo.lastSeen = Date.now();
+  return JSON.stringify(response);
+}
+```
+
+This returns a string containing some JSON with the current timestamp and the
+time since the last time the handler run.
 
 ## Caveats and notes
 
