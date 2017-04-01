@@ -88,5 +88,4 @@
   Would need that anyway for request log / inspection
 - Less classy express thingy?
 - Added debug module perhaps?
-- use STATUS_CODES from http module?
 - ANY extension thingy for UI on proxy routes

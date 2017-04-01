@@ -381,3 +381,8 @@ In some cases there needs to be a predictable handler ID, so it's possible to
 script changing the handler. In this case adding `name.hid-myhid.json` would
 assign `myhid` as the handler ID. Thus it would be safe to later use the HTTP
 API to activate the `myhid` handler.
+
+## Caveats and notes
+
+- The HTTP status code is allowed to be any three digit number, regardless
+  if it's a defined status code or not.
