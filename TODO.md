@@ -39,6 +39,8 @@
 - caching
 - Throw on unknown method?
 - Validate status?
+- `.extension` only used in cli. Remove it?
+  - Ditto with the `.name` ?
 
 ## CLI
 
@@ -71,7 +73,6 @@
 - Screenshot / screen cast thingies
 - Calling conventions / object types for script handlers req / res objects
 - Memo object
-- What is synchronous and what isn't
 
 
 ## Other

@@ -52,4 +52,3 @@ test('Multiple methods cause multiple handlers', () => {
     expect(handler.method)
         .toEqual('PUT');
 });
-
