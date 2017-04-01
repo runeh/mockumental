@@ -11,7 +11,7 @@ function printHumanreadable(h, file) {
     status:       ${ h.status }
     handler type: ${ h.handlerType }
     mime type:    ${ h.mimeType ? h.mimeType : 'none' }
-    delay:        ${ h.delay ? h.delay + ' milliseconds' : 'none' }
+    delay:        ${ h.delay ? `${ h.delay } milliseconds` : 'none' }
     is default?:  ${ h.isDefaultHandler ? 'yes' : 'no' }
     handler id:   ${ h.handlerId ? h.handlerId : '<automatic>' }    
     `.trim());
