@@ -19,3 +19,8 @@ test('script json type, json as handler name', () => {
     expect(inferExtension('json.js'))
         .toBe('json');
 });
+
+test('explicit static json type', () => {
+    expect(inferExtension('ok.json.static'))
+        .toBe('json');
+});

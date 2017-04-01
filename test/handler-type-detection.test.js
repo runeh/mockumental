@@ -29,3 +29,8 @@ test('proxy handler', () => {
     expect(getHandlerType('ok.proxy'))
         .toBe('proxy');
 });
+
+test('explicit static html type', () => {
+    expect(getHandlerType('ok.html.static'))
+        .toBe('static');
+});

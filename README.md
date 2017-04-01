@@ -373,6 +373,9 @@ considered to be a static handler.
 Static handlers simply returns the contents of the file. The mime type is
 determined by looking at the file extension.
 
+Optionally a file name can end with `.static` to be more explicit about a
+handler being static.
+
 #### Proxy handlers
 
 A handler file name that ends with `.proxy` is considered to be a proxy handler.

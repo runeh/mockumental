@@ -41,7 +41,6 @@
 - Validate status?
 - `.extension` only used in cli. Remove it?
   - Ditto with the `.name` ?
-- allow `static` as an explicit extension?
 - move params onto request object so it's more expressy?
 
 ## CLI
