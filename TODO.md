@@ -21,7 +21,6 @@
 - Calling convention for script handlers re path, query and body
 - Pidfile / persist previous state?
 - throw when non-usable file find or null it?
-- Resolve retval from handlers so script handlers can do promises.
 - Delay code that tries to compensate for handler duration? Overkill?
 - Support for `.html.json` where the json body contains same as a
   mockumental response. body, headers, whatnot

@@ -343,7 +343,8 @@ There are three types of response handlers:
 
 - Static - Sends the contents of the handler file as the response body.
 - Script - Executes the function in the handler file and sends the return
-  value as the response body.
+  value as the response body. Handler functions may return a string or a
+  promise for a string.
 - Proxy - Forwards the request to a different server and returns the response.
 
 For static and script handlers, there will be a mime type determined by a
