@@ -46,8 +46,6 @@
 
 - Use chalk for colors and stuff. Harder.
 - cli for selecting a hid via http?
-- prettyprint flag on json list?
-- 'explain' command?
 - show delay
 
 
