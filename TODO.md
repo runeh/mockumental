@@ -40,8 +40,7 @@
 - caching
 - Throw on unknown method?
 - Validate status?
-- `.extension` only used in cli. Remove it?
-  - Ditto with the `.name` ?
+- `.name` only used in cli. Remove it? Rename to basename?
 - move params onto request object so it's more expressy?
 - make proxy handlers get `any` as default response
 
@@ -63,8 +62,9 @@
 
 - More inferers
 - Tree munging
-- Express
-- query args for proxying. Define what happens if both have them.
+- Proxying
+  - middleman or something
+  - query args for proxying. Define what happens if both have them.
 - assertions for handler name parsing
   - Only a single status code allowed
 - Test malformed input to handlers from path

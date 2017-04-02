@@ -12,8 +12,6 @@ test('static handler smoke test', () => {
         .toEqual('ok handler');
     expect(handler.handlerType)
         .toEqual('static');
-    expect(handler.extension)
-        .toEqual('json');
 });
 
 test('script handler smoke test', () => {
@@ -28,8 +26,6 @@ test('script handler smoke test', () => {
         .toEqual('ok handler');
     expect(handler.handlerType)
         .toEqual('script');
-    expect(handler.extension)
-        .toEqual('json');
 });
 
 test('Multiple methods cause multiple handlers', () => {
