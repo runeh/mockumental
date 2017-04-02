@@ -44,7 +44,6 @@
   - Ditto with the `.name` ?
 - move params onto request object so it's more expressy?
 - make proxy handlers get `any` as default response
-- handle 404 etc for proxy
 
 ## CLI
 
