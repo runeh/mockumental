@@ -72,6 +72,9 @@
 - Clean up example dirs
 - Screenshot / screen cast thingies
 - Calling conventions / object types for script handlers req / res objects
+- jsdoc typedef for handler
+- typings for flow and ts?
+
 
 ## Other
 
