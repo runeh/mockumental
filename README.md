@@ -398,9 +398,13 @@ script handler. `<mime-extension>` can be any extension with a valid MIME
 type. So for example `ok.json.js` is a script handler with the MIME type
 of json.
 
-A script handler must be a node module file that exports a single function.
+A script handler must be a node module file that exports either a string or a
+single function.
 
-The function must return either a string, or a promise of a string.
+If the export is a string, it is used as the response body.
+
+If the export is a function it must return either a string, or a promise of a
+string.
 
 The function will be called with three arguments, `params`, `request` and
 `memo`.
