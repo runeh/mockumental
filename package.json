@@ -23,7 +23,8 @@
     "devDependencies": {
         "deep-sort-object": "^1.0.1",
         "eslint": "^3.19.0",
-        "jest": "^19.0.2"
+        "jest": "^19.0.2",
+        "supertest": "^3.0.0"
     },
     "scripts": {
         "test": "jest",
