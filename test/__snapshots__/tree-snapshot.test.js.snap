@@ -48,6 +48,30 @@ exports[`dir parsing snapshot smoke test 1`] = `
             {
                 "current": true,
                 "delay": 0,
+                "extension": null,
+                "handlerId": "r2h1",
+                "handlerType": "proxy",
+                "isDefaultHandler": false,
+                "method": "GET",
+                "mimeType": false,
+                "name": "echo.proxy",
+                "path": "/fixture-tree/echo/echo.proxy",
+                "prettyName": "echo",
+                "proxyUrl": "http://httpbin.org/get",
+                "relPath": "/echo/echo.proxy",
+                "routeId": "r2",
+                "status": 200
+            }
+        ],
+        "method": "GET",
+        "path": "/echo",
+        "routeId": "r2"
+    },
+    {
+        "handlers": [
+            {
+                "current": true,
+                "delay": 0,
                 "extension": "json",
                 "handlerId": "myuser",
                 "handlerType": "static",
@@ -59,14 +83,14 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "found my user",
                 "proxyUrl": null,
                 "relPath": "/user/found-my-user.hid-myuser.200.json",
-                "routeId": "r2",
+                "routeId": "r3",
                 "status": 200
             },
             {
                 "current": false,
                 "delay": 500,
                 "extension": "json",
-                "handlerId": "r2h1",
+                "handlerId": "r3h1",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -76,14 +100,14 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "found slow",
                 "proxyUrl": null,
                 "relPath": "/user/found-slow.delay-500.json",
-                "routeId": "r2",
+                "routeId": "r3",
                 "status": 200
             },
             {
                 "current": false,
                 "delay": 0,
                 "extension": "json",
-                "handlerId": "r2h2",
+                "handlerId": "r3h2",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -93,14 +117,14 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "found",
                 "proxyUrl": null,
                 "relPath": "/user/found.json",
-                "routeId": "r2",
+                "routeId": "r3",
                 "status": 200
             },
             {
                 "current": false,
                 "delay": 0,
                 "extension": "json",
-                "handlerId": "r2h3",
+                "handlerId": "r3h3",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -110,35 +134,11 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "not found",
                 "proxyUrl": null,
                 "relPath": "/user/not-found.404.json",
-                "routeId": "r2",
+                "routeId": "r3",
                 "status": 404
             }
         ],
         "method": "GET",
-        "path": "/user",
-        "routeId": "r2"
-    },
-    {
-        "handlers": [
-            {
-                "current": true,
-                "delay": 0,
-                "extension": "json",
-                "handlerId": "r3h4",
-                "handlerType": "static",
-                "isDefaultHandler": false,
-                "method": "POST",
-                "mimeType": "application/json",
-                "name": "update.POST.json",
-                "path": "/fixture-tree/user/update.POST.json",
-                "prettyName": "update",
-                "proxyUrl": null,
-                "relPath": "/user/update.POST.json",
-                "routeId": "r3",
-                "status": 200
-            }
-        ],
-        "method": "POST",
         "path": "/user",
         "routeId": "r3"
     },
@@ -148,7 +148,31 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "current": true,
                 "delay": 0,
                 "extension": "json",
-                "handlerId": "r4h1",
+                "handlerId": "r4h4",
+                "handlerType": "static",
+                "isDefaultHandler": false,
+                "method": "POST",
+                "mimeType": "application/json",
+                "name": "update.POST.json",
+                "path": "/fixture-tree/user/update.POST.json",
+                "prettyName": "update",
+                "proxyUrl": null,
+                "relPath": "/user/update.POST.json",
+                "routeId": "r4",
+                "status": 200
+            }
+        ],
+        "method": "POST",
+        "path": "/user",
+        "routeId": "r4"
+    },
+    {
+        "handlers": [
+            {
+                "current": true,
+                "delay": 0,
+                "extension": "json",
+                "handlerId": "r5h1",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -158,14 +182,14 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "cars",
                 "proxyUrl": null,
                 "relPath": "/MARKET/cars.json",
-                "routeId": "r4",
+                "routeId": "r5",
                 "status": 200
             },
             {
                 "current": false,
                 "delay": 0,
                 "extension": "json",
-                "handlerId": "r4h2",
+                "handlerId": "r5h2",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -175,14 +199,14 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "jobs",
                 "proxyUrl": null,
                 "relPath": "/MARKET/jobs.json.static",
-                "routeId": "r4",
+                "routeId": "r5",
                 "status": 200
             },
             {
                 "current": false,
                 "delay": 0,
                 "extension": "json",
-                "handlerId": "r4h3",
+                "handlerId": "r5h3",
                 "handlerType": "static",
                 "isDefaultHandler": false,
                 "method": "GET",
@@ -192,13 +216,13 @@ exports[`dir parsing snapshot smoke test 1`] = `
                 "prettyName": "realestate",
                 "proxyUrl": null,
                 "relPath": "/MARKET/realestate.json",
-                "routeId": "r4",
+                "routeId": "r5",
                 "status": 200
             }
         ],
         "method": "GET",
         "path": "/:market",
-        "routeId": "r4"
+        "routeId": "r5"
     }
 ]
 `;
