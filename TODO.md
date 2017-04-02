@@ -30,17 +30,14 @@
 - Split up handler name parsing and handler loading, for testing and
   to be able to implement the `describe` command
 - Optional dash in name delay directive?
-- Sanity check hid selection
 - figure out copy / immutability semantics when mutating routes on hid
   selection
 - Sanity check proxy URL?
-  - support only paths?
+  - support paths as well?
 - lower case method names? so 'post.json' works?
 - Support buffers as retval from script handlers?
 - caching
 - Throw on unknown method?
-- Validate status?
-- `.name` only used in cli. Remove it? Rename to basename?
 - move params onto request object so it's more expressy?
 - make proxy handlers get `any` as default response
 
