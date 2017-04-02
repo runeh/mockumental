@@ -14,6 +14,22 @@ function setup() {
     return [app, mocker];
 } 
 
+test('Get route info with admin HTTP request', async () => {
+    const [app, mocker] = setup();
+    mocker.activateHandler('1');
+
+    const response = await request(app)
+        .get('/mocks/__admin')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+    const route = response.body.find(e => e.path === '/');
+    expect(route).toBeTruthy();
+    const handler = route.handlers.find(e => e.handlerId === '1');
+    expect(handler).toBeTruthy();
+    expect(handler.current).toBe(true);
+});
+
 test('Set handler with admin HTTP request', async () => {
     const [app, mocker] = setup();
     mocker.activateHandler('1');
@@ -31,4 +47,12 @@ test('Set handler with admin HTTP request', async () => {
     expect(handler.current).toBe(true);
 });
 
-// fixme: what happens when unknown hid?
+test('Try setting an invalid handler with admin HTTP request', async () => {
+    const [app] = setup();
+
+    return request(app)
+        .post('/mocks/__admin')
+        .send('hid=3123123123123123123')
+        .expect('Content-Type', /json/)
+        .expect(400);
+});
