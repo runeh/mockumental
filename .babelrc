@@ -1,0 +1,4 @@
+{
+    // babel is only used for tests, so we can use async/await
+    "plugins": ["transform-async-to-generator"]
+}
