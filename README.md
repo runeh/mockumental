@@ -328,6 +328,8 @@ If there is no status code directive, the default status is 200.
 Note that for proxy routes, the status code directive is not used. It is not
 possible to override the status code sent by the upstream server.
 
+Query arguments will be forwarded to the upstream server.
+
 #### Delay
 
 A delay directive looks like `delay-<digits><unit>`. Allowed units are 'ms'
@@ -356,7 +358,7 @@ assign `myhid` as the handler ID. Thus it would be safe to later use the HTTP
 API to activate the `myhid` handler.
 
 
-### Mime and handler type
+### MIME and handler type
 
 There are three types of response handlers:
 
@@ -367,10 +369,10 @@ There are three types of response handlers:
 
 #### Static handlers
 
-A handler file name that ends in an extension with a valid mime type is
+A handler file name that ends in an extension with a valid MIME type is
 considered to be a static handler.
 
-Static handlers simply returns the contents of the file. The mime type is
+Static handlers simply returns the contents of the file. The MIME type is
 determined by looking at the file extension.
 
 Optionally a file name can end with `.static` to be more explicit about a
@@ -385,14 +387,15 @@ The target URL is read from the file. Thus the contents of a proxy route
 handler should be a string containing a sungle URL.
 
 Note that response code set in the file name is ignored for proxy handlers.
-The response code from the upstream server is used.
+The response code from the upstream server is used. The same apply to MIME
+types. They are ignored for proxy routes, the upstream sets the MIME type.
 
 
 #### Script handlers
 
 A handler file name that ends with `<mime-extension>.js` is considered a
-script handler. `<mime-extension>` can be any extension with a valid mime
-type. So for example `ok.json.js` is a script handler with the mime type
+script handler. `<mime-extension>` can be any extension with a valid MIME
+type. So for example `ok.json.js` is a script handler with the MIME type
 of json.
 
 A script handler must be a node module file that exports a single function.
@@ -434,3 +437,5 @@ time since the last time the handler run.
 
 - The HTTP status code is allowed to be any three digit number, regardless
   if it's a defined status code or not.
+- Query arguments are ignored for static handlers. Script handlers can read
+  them from the request object if they need to.

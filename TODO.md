@@ -33,15 +33,18 @@
 - Sanity check hid selection
 - figure out copy / immutability semantics when mutating routes on hid
   selection
-- Sanity check proxy URL
+- Sanity check proxy URL?
+  - support only paths?
 - lower case method names? so 'post.json' works?
-- Support buffers as retval from script handlers
+- Support buffers as retval from script handlers?
 - caching
 - Throw on unknown method?
 - Validate status?
 - `.extension` only used in cli. Remove it?
   - Ditto with the `.name` ?
 - move params onto request object so it's more expressy?
+- make proxy handlers get `any` as default response
+- handle 404 etc for proxy
 
 ## CLI
 
@@ -73,9 +76,6 @@
 - Clean up example dirs
 - Screenshot / screen cast thingies
 - Calling conventions / object types for script handlers req / res objects
-- Memo object
-- Document mime type details about proxy routes.
-
 
 ## Other
 
