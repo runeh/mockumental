@@ -11,9 +11,6 @@
 - support 'ANY' for status for proxying at least, needs to
   - show it in the ui
   - bail if setting status in name
-- inferer / handler field for extension
-- add `handleRequest` that takes node request obj? Maybe even takes
-  optional response object to write to.
 - `.proxy.js` for script proxy targets. Needed? Overkill? Might be useful
   for wildcard paths. Might not matter, better to just create explicit
   proxy routes in that case.
@@ -40,6 +37,7 @@
 - Throw on unknown method?
 - move params onto request object so it's more expressy?
 - make proxy handlers get `any` as default response
+- throw in invalid methods and multiple status codes
 
 ## CLI
 
@@ -57,7 +55,6 @@
 
 ## Tests
 
-- More inferers
 - Tree munging
 - Proxying
   - middleman or something
@@ -89,3 +86,5 @@
 - Less classy express thingy?
 - Added debug module perhaps?
 - ANY extension thingy for UI on proxy routes
+
+## Unknowns
