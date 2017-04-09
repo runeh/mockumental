@@ -2,7 +2,6 @@
 
 ## Core 
 
-- Remove cache code until it's implemented
 - .cache. On path, qs, args?
 - sorting is wonky for alpha route names?
 - Error out if using a status in a proxy handler name
@@ -24,8 +23,6 @@
   - Perhaps naming should be .resjson or something? 
 - Support string or object as retval fron script handlers. If object, treat
   as mockumental response?
-- Split up handler name parsing and handler loading, for testing and
-  to be able to implement the `describe` command
 - Optional dash in name delay directive?
 - figure out copy / immutability semantics when mutating routes on hid
   selection
