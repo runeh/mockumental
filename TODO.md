@@ -2,7 +2,6 @@
 
 ## Rest
 
-- Throw on unknown method
 - throw when non-usable file find or null it?
 - Semantics for merging query params for proxying
   - just support multiple, like the spec says.
