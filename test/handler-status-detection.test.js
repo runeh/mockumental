@@ -14,3 +14,9 @@ test('status as file name', () => {
     expect(inferStatusCode('506.json'))
         .toBe(506);
 });
+
+test('throw on multiple status codes', () => {
+    expect(
+        () => inferStatusCode('lol.300.506.json')
+    ).toThrow(/multiple status codes/);
+});
