@@ -1,5 +1,13 @@
 # Todo:
 
+## Rest
+
+- Throw on unknown method
+- throw multiple status codes
+- throw when non-usable file find or null it?
+- Semantics for merging query params for proxying
+  - just support multiple, like the spec says.
+
 ## Core 
 
 - .cache. On path, qs, args?
@@ -13,10 +21,8 @@
 - `.proxy.js` for script proxy targets. Needed? Overkill? Might be useful
   for wildcard paths. Might not matter, better to just create explicit
   proxy routes in that case.
-- Semantics for merging query params for proxying
 - Calling convention for script handlers re path, query and body
 - Pidfile / persist previous state?
-- throw when non-usable file find or null it?
 - Delay code that tries to compensate for handler duration? Overkill?
 - Support for `.html.json` where the json body contains same as a
   mockumental response. body, headers, whatnot
@@ -30,10 +36,8 @@
 - lower case method names? so 'post.json' works?
 - Support buffers as retval from script handlers?
 - caching
-- Throw on unknown method?
 - move params onto request object so it's more expressy?
 - make proxy handlers get `any` as default response
-- throw in invalid methods and multiple status codes
 
 ## CLI
 
