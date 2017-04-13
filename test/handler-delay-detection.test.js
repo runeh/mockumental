@@ -23,3 +23,21 @@ test('delay with s unit', () => {
     expect(delay)
         .toEqual(3000);
 });
+
+test('delay without unit - no dash', () => {
+    const delay = inferDelay('ok.delay300.json');
+    expect(delay)
+        .toEqual(300);
+});
+
+test('delay with ms unit - no dash', () => {
+    const delay = inferDelay('ok.delay200ms.json');
+    expect(delay)
+        .toEqual(200);
+});
+
+test('delay with s unit - no dash', () => {
+    const delay = inferDelay('ok.delay3s.json');
+    expect(delay)
+        .toEqual(3000);
+});

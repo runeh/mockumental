@@ -23,7 +23,6 @@
   - Perhaps naming should be .resjson or something? 
 - Support string or object as retval fron script handlers. If object, treat
   as mockumental response?
-- Optional dash in name delay directive?
 - figure out copy / immutability semantics when mutating routes on hid
   selection
 - Sanity check proxy URL?
