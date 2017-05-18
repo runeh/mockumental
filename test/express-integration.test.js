@@ -11,11 +11,11 @@ function setup() {
     const app = express();
     const mocker = new ExpressMockumental(mockRootDir);
     app.use('/mocks', mocker.router);
-    return [app, mocker];
+    return { app, mocker };
 } 
 
 test('smoke test 1', () => {
-    const [app, mocker] = setup();
+    const { app } = setup();
     return request(app)
         .get('/mocks/')
         .expect('Content-Type', /html/)
@@ -24,7 +24,7 @@ test('smoke test 1', () => {
 });
 
 test('smoke test 2', () => {
-    const [app, mocker] = setup();
+    const { app, mocker } = setup();
     mocker.activateHandler('2');
     return request(app)
         .get('/mocks/')
@@ -34,7 +34,7 @@ test('smoke test 2', () => {
 });
 
 test('smoke test 3', () => {
-    const [app, mocker] = setup();
+    const { app } = setup();
     return request(app)
         .post('/mocks/')
         .expect('Content-Type', /html/)
@@ -43,7 +43,7 @@ test('smoke test 3', () => {
 });
 
 test('smoke test 4', () => {
-    const [app, mocker] = setup();
+    const { app, mocker } = setup();
     mocker.activateHandler('3');
     return request(app)
         .get('/mocks/')
